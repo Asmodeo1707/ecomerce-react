@@ -10,11 +10,12 @@
   box-shadow: 0 0 20px #0005;
   padding: 20px;
   border-radius: 10px;
+  background-color: #8dfeda;
 }
 .login__test {
   width: 100%;
   padding: 12px 8px;
-  background-color: var(--secondary-color);
+  background-color: #a986ff;
   color: var(--primary-color);
   border-radius: 5px;
   margin-bottom: 5px;
@@ -28,4 +29,15 @@
 }
 .login__item{
   margin-bottom: 10px;
+}
+.User_Logged{
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.User_Logged i{
+  color: #8dfeda;
+}
+.Msg_User-logged{
+  color: #bbb;
 }
