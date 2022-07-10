@@ -51,9 +51,9 @@ const ProductInfoId = ({product}) => {
       </div>
       <button 
         onClick={addToCart} 
-        className='product-info__btn'
-        data-text='Add to Cart'>
-        Add to Cart <i className="fa-solid fa-cart-plus"></i>
+        className='product-info__btn'>
+        Add to Cart 
+        <i className="fa-solid fa-cart-plus"></i>
       </button>
     </article>
   )

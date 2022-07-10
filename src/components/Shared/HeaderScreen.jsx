@@ -13,7 +13,9 @@ const HeaderScreen = () => {
   return (
     <header className="header">
       <h1 className="header__title">
-        <Link to='/'>e-commerce</Link>
+        <Link to='/'>Technoworld
+        <i class='bx bx-heart bx-flashing'></i>
+        </Link>
       </h1>
       <div onClick={clickMenuHam} className="header__menuham">
         <i className="fa-solid fa-bars"></i>
@@ -24,7 +26,7 @@ const HeaderScreen = () => {
             <NavLink 
                 to='/login' 
                 className={({isActive}) => isActive ? 'navbar__link-active navbar__links' : 'navbar__links'}>
-              <i className="fa-solid fa-user"></i>
+              <i class='bx bxs-user bx-tada' ></i>
               <p className="navbar__label">Login</p>
             </NavLink>
           </li>
@@ -32,7 +34,7 @@ const HeaderScreen = () => {
             <NavLink 
                 to='/purchases' 
                 className={({isActive}) => isActive ? 'navbar__link-active navbar__links' : 'navbar__links'}>
-              <i className="fa-solid fa-store"></i>
+              <i class='bx bxs-purchase-tag bx-tada' ></i>
               <p className="navbar__label">Purchases</p>
             </NavLink>
           </li>
@@ -40,7 +42,7 @@ const HeaderScreen = () => {
             <NavLink 
                 to='/cart' 
                 className={({isActive}) => isActive ? 'navbar__link-active navbar__links' : 'navbar__links'}>
-              <i className="fa-solid fa-cart-shopping"></i>
+              <i class='bx bxs-cart bx-fade-right' ></i>
               <p className="navbar__label">Cart</p>
             </NavLink>
           </li>

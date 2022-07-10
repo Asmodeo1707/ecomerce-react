@@ -3,12 +3,25 @@
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px
+  gap: 20px;
+  background-color: #1c0043;
 }
 .card-product {
   width: min(100%, 220px);
   border-radius: 10px;
-  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: box-shadow 200ms ease;
+  border: 2px solid white;
+}
+.card-product:hover {
+  border: 0.2rem solid #fff;
+  box-shadow: 0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 2rem #bc13fe,
+  0 0 0.8rem #bc13fe,
+  0 0 2.8rem #bc13fe,
+  inset 0 0 1.3rem #bc13fe;
+  transition: box-shadow 200ms ease;
 }
 .card-product__header {
   height: 200px;
@@ -23,11 +36,11 @@
   transition: opacity 400ms ease-out;
   opacity: 1;
 }
-.card-product__header:hover .card-product__img {
+.card-product__header:hover::before .card-product__img {
   opacity: 0;
   transition: opacity 400ms ease-out;
 }
-.card-product__header:hover .card-product__img-back {
+.card-product__header:hover.card-product__img-back {
   opacity: 1;
   transition: opacity 400ms ease-out;
 }
@@ -49,11 +62,13 @@
   font-size: 1.1rem;
   margin-bottom: 15px;
   height: 42px;
-
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: .9rem;
 }
 .card-product__price-label {
   font-size: 0.8rem;
-  color: #888a;
+  color: #80829a;
   position: relative;
   left: -5px;
   margin-bottom: 3px;
@@ -61,6 +76,7 @@
 .card-product__price-number {
   font-size: 1rem;
   font-weight: 700;
+  color: white;
 }
 .card-product__btn {
   position: absolute;
@@ -73,4 +89,9 @@
   background-color: var(--secondary-color);
   color: var(--primary-color);
   cursor: pointer;
+  transition: transform 200ms ease;
+}
+.card-product__btn:hover {
+  transform: scale(1.2);
+  transition: transform 200ms ease;
 }
